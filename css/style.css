@@ -16,6 +16,95 @@ body {
   background-attachment: fixed;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+body#pho-recipe {
+  padding: 2rem;
+  background-image: none;
+  /* 
+  This background was created using the following tool:
+  https://10015.io/tools/css-background-pattern-generator
+  */
+  background:
+      conic-gradient(at 10% 50%,#0000 75%,#313d56 0),
+      conic-gradient(at 10% 50%,#0000 75%,#313d56 0) calc(1*32px) calc(3*32px),
+      conic-gradient(at 10% 50%,#0000 75%,#313d56 0) calc(2*32px) calc(1*32px),
+      conic-gradient(at 10% 50%,#0000 75%,#313d56 0) calc(3*32px) calc(4*32px),
+      conic-gradient(at 10% 50%,#0000 75%,#313d56 0) calc(4*32px) calc(2*32px),
+      conic-gradient(at 50% 10%,#0000 75%,#313d56 0) 0 calc(4*32px),
+      conic-gradient(at 50% 10%,#0000 75%,#313d56 0) calc(1*32px) calc(2*32px),
+      conic-gradient(at 50% 10%,#0000 75%,#313d56 0) calc(2*32px) 0,
+      conic-gradient(at 50% 10%,#0000 75%,#313d56 0) calc(3*32px) calc(3*32px),
+      conic-gradient(at 50% 10%,#0000 75%,#313d56 0) calc(4*32px) calc(1*32px),
+      #394764;
+background-size: 160px 160px;
+
+}
+
+header {
+  background-color: #f87060;
+  padding: 2rem;
+  max-width: 1400px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+header h1, header h2, header p {
+  color: #eee0cb;
+}
+
+main {
+  background-color: #eee0cb;
+  max-width: 1400px;
+  margin: 0 auto;
+  color: #313d56;
+}
+
+main  h3, main h4 {
+  color: #313d56;
+}
+
+#pho-recipe footer {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+section {
+  display: flex;
+}
+
+article {
+  flex: 0 0 50%;
+  padding: 2rem;
+}
+
+.show-on-mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+  section {
+    display: block;
+  }
+  article {
+    flex: auto;
+    padding: 2rem 1rem;
+  }
+  .show-on-mobile {
+    display: block;
+  }
+  .hide-on-mobile {
+    display: none;
+  }
+  body#pho-recipe {
+    padding: 1rem;
+  }
+}
+
 h1, h2, h3, h4 {
   color: #556b2f;
   font-family: "Fredoka", sans-serif;
@@ -55,9 +144,25 @@ a:hover {
   background-image: url('../images/Homemade_Paella_with_lots_of_seafood.jpg');
 }
 
-@media only screen and (max-width: 500px) {
+.rate-recipe input{
+  padding: 0.5rem;
+  border-radius: 0.4rem;
+  border: 1px solid #aaa;
+}
+
+@media only screen and (max-width: 550px) {
   .thumbnail {
     height: 250px;
+  }
+  .rate-recipe input{
+    width: 100%;
+  }
+  .rate-recipe {
+    display: block;
+    text-align: center;
+  }
+  body#pho-recipe {
+    padding: 0;
   }
 }
 
@@ -74,12 +179,6 @@ a:hover {
   border-top-left-radius: 1rem;
   box-sizing: border-box;
   border: 6px solid #000;
-}
-
-.container input{
-  padding: 0.5rem;
-  border-radius: 0.4rem;
-  border: 1px solid #aaa;
 }
 
 .rate-recipe {
@@ -157,6 +256,8 @@ footer {
 footer span {
   float: right;
 }
+
+
 
 @media only screen and (max-width: 728px) {
   body {
